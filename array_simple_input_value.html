@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<style>
+body {padding-top:50px} 
+</style>
+<script type="text/javascript">
+  var x = 0;
+var array = Array();
+
+function display_array()
+{
+   array[x] = document.getElementById("text1").value;
+   var element="";
+   for (var i=0; i<array.length; i++)
+   {
+     element += "Element" + "  " + " = " + array[i] + "<br/>";
+   }
+   document.getElementById("Result").innerHTML = element;
+}
+</script> 
+</head>
+<body>
+<input type="text" id="text1"></input>
+<input type="button" id="button2" value="Display" onclick="display_array();"></input>
+<div id="Result"></div> 
+</body>
+</html>
