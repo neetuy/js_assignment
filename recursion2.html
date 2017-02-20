@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	function countDown() {
+   var n=document.getElementById('num');
+    if (n > 0) {
+         
+        var countdown=n-1;
+        document.getElementById('count').value=countdown;
+    }
+  document.getElementById('count').value=countdown;   
+}
+</script>
+<body>
+Enter Num: <input id="num"><br><br>
+<button onclick="countDown();">Factorial</button>
+<input id="count">
+</body>
+</html>

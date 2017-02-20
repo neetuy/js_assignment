@@ -2,28 +2,42 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>JS Bin</title>
+<title>array simple</title>
 <style>
 body {padding-top:50px} 
 </style>
 <script type="text/javascript">
-  var x = 0;
-var array = Array();
+//defining x varible 
+var x = 0;
+// define array
+var arrayex = [];
+//function for add element
+function add_element_to_array()
+{
+//assign value to array taking from input element
+ arrayex[x] = document.getElementById("value").value;
+ //alert showing the index where value is assigned
+ alert("Element: " + arrayex[x] + " Added at index " + x);
+ //increase value of x every time 
+ x++;
+}
 
 function display_array()
-{
-   array[x] = document.getElementById("text1").value;
-   var element="";
-   for (var i=0; i<array.length; i++)
-   {
-     element += "Element" + "  " + " = " + array[i] + "<br/>";
+{// element variable
+   var element =""; 
+   //value of index will exicute from o to length of array  
+   for (var y=0; y<arrayex.length; y++)
+   {//display value of array element
+     element += "Element" + y + " = " + arrayex[y] + "<br/>";
    }
+   //put the output in the div
    document.getElementById("Result").innerHTML = element;
 }
 </script> 
 </head>
 <body>
-<input type="text" id="text1"></input>
+<input type="text" id="value"></input>
+<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
 <input type="button" id="button2" value="Display" onclick="display_array();"></input>
 <div id="Result"></div> 
 </body>
