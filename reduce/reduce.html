@@ -4,14 +4,18 @@
 	<title>reduce value using javascript</title>
 </head>
 <script type="text/javascript">
-
+//function reduce data
 function reduce_data(){
+	//define array
 	var array=[1,2,3,4,5];
+	//write array value to div element
 document.getElementById('array').innerHTML=array;
+//reduce data by adding all value of array
 	var sum = array.reduce(function(total,num){
 		return total+num;
 	},0);
 	// console.log(sum);
+	//display sum
 	document.getElementById("sum").innerHTML=sum;
 }
 </script>

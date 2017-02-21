@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+var nameCurried = function(first_name) {
+  return function(last_name) {
+    console.log(first_name + ", " +last_name );
+  };
+};
+var fullName = nameCurried("abc");
+fullName("xyz"); 
+nameCurried("lmn")("xyz");
+</script>
+<body>
+</body>
+</html>

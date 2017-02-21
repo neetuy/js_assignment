@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>reduce value using javascript</title>
+</head>
+<script type="text/javascript">
+//var emp:eployee with object name and experience
+var emp = [
+    { name:'a', experience:4 },
+    { name:'b', experience:2 },
+    { name:'c', experience:0 },
+    { name:'d', experience:4 },
+    { name:'e', experience:6 },
+    { name:'f', experience:5 },
+    { name:'g', experience:0 },    
+];
+//reduce data 
+var sum = emp.reduce(function(prevVal, elem) 
+	{	//add all value of experience
+    return prevVal + elem.experience;
+}, 0);
+console.log(sum);
+</script>
+<body>
+</body>
+</html>

@@ -1,23 +1,22 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-	<title></title>
+    <title>Space Clicker</title>
 </head>
-<script type="text/javascript">
-	function countDown() {
-   var n=document.getElementById('num');
-    if (n > 0) 
-    {
-         
-        var countdown=n-1;
-        document.getElementById('count').innerHTML=countdown;
-    }
- 		document.getElementById('count').innerHTML=countdown;   
-}
-</script>
+
 <body>
-Enter Num: <input id="num"><br><br>
-<button onclick="countDown();">count</button>
-<input id="count">
-</body>
-</html>
+    <script type="text/javascript">
+    //define variable globaly
+    var clicks = 0;
+    //function 
+    function onClick() 
+    {	//onclick every time increase the value of click by 1
+        clicks += 1;
+        //show counter value in p with id clicks
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
+    <button type="button" onClick="onClick()">Click me</button>
+    <p>Clicks: <a id="clicks">0</a></p>
+
+</body></html>

@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+var getColorBetween;
+var getFallColor = getColorBetween.curry( "#ff8000"); 
+reddishFallColor = getFallColor("red"); 
+yellowishFallColor = getFallColor("yellow"); 
+brownishFallColor = getFallColor("#800000"); 
+document.getElementById('reddishFallColor').style.color=reddishFallColor;
+</script>
+<body>
+<span id="reddishFallColor"></span>
+<!-- <span id="yellowishFallColor"></span>
+<span id="brownishFallColor"></span> -->
+</body>
+</html>
