@@ -4,20 +4,21 @@
 	<title></title>
 	<script type="text/javascript">
 	var sumFour = curry(function(w, x, y, z) {
-  return w + x + y + z;
+  return w + x + y + z; 
 });
-
+  
+console.log(f1);
 // returns a function awaiting three arguments
-var  f1 = sumFour(10),        
+  var  f1 = sumFour(10);        
     // returns a function awaiting one argument
-  var f2 = sumFour(1)(2, 3),   
+  var f2 = sumFour(1)(2, 3);   
    // returns a function awaiting one argument
- var f3 = sumFour(1, 2, 7),   
+ var f3 = sumFour(1, 2, 7);  
    // sumFour has been fully applied; x is equal to 1+2+3+4=10
   var x  = sumFour(1, 2, 3, 4); 
  // fully applied; x2 equals 10
   var x2 = sumFour(1)(2)(3)(4); 
-  
+ 
 	</script>
 </head>
 <body>
