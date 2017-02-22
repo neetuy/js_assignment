@@ -14,7 +14,9 @@
   return reject("oops");
  }
 });
+	//this will not call 
 	promise.then(x => console.log(x));
+	//this error will call
 	promise.catch(error => console.log('error',error));
 	
 	</script>

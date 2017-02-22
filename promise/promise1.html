@@ -3,12 +3,17 @@
 <head>
 	<title></title>
 	<script type="text/javascript">
+  //function
 		const fulfilledThenable = {
+      //set future value
       then(reaction) {
+        //pass hello to then
           reaction('hello');
       }
   };
+  //promise variable call fulfilledthenable variable;
   const promise = Promise.resolve(fulfilledThenable);
+  
   console.log(promise instanceof Promise); // true
   promise.then(x => console.log(x)); // hello
 	</script>

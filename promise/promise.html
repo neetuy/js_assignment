@@ -3,15 +3,20 @@
 <head>
 	<title></title>
 	<script type="text/javascript">
+	//function 
 		function asyncFunc() {
-    const blank = [];
+			//define array
+    var blank = [];
+    //setTimeout for push 'done' in blank
     setTimeout(() => blank.push('DONE'), 100);
+    //return value
     return blank;
 }
-const blank = asyncFunc();
+//
+var blank = asyncFunc();
 // Wait until the value has been filled in
 setTimeout(() => {
-    const x = blank[0]; // (A)
+    var x = blank[0]; // push blank to x variable
     console.log('Result: '+x);
 }, 200);
 	</script>
