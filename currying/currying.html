@@ -4,11 +4,13 @@
 	<title></title>
 </head>
 <script type="text/javascript">
+//function curried
 var nameCurried = function(first_name) {
   return function(last_name) {
     console.log(first_name + ", " +last_name );
   };
 };
+//nameCurried can be used by passing parameter several times .
 var fullName = nameCurried("abc");
 fullName("xyz"); 
 nameCurried("lmn")("xyz");
