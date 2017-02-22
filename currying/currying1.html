@@ -5,16 +5,27 @@
 	<title></title>
 </head>
 <script type="text/javascript">
-var getColorBetween;
-var getFallColor = getColorBetween.curry( "#ff8000"); 
-reddishFallColor = getFallColor("red"); 
-yellowishFallColor = getFallColor("yellow"); 
-brownishFallColor = getFallColor("#800000"); 
-document.getElementById('reddishFallColor').style.color=reddishFallColor;
+var curryIt = function(uncurried) {
+  var parameters = Array.prototype.slice.call(arguments, 1);
+  return function() {
+    return uncurried.apply(this, parameters.concat(
+      Array.prototype.slice.call(arguments, 0)
+    ));
+  };
+};
+
+var employee = function(name, depart, address) {
+  console.log(name+ depart + address);
+};
+
+var emp = curryIt(employee," A ");
+emp(" Management "," Delhi ");
+emp(" Hr "," jaipur ");
+
+var emp_2 = curryIt(employee,"B"," HR ");
+emp_2(" Gurgaon ");
+// var emp_2 = curryIt(employee,"c","HR","jaipur");
 </script>
 <body>
-<span id="reddishFallColor"></span>
-<!-- <span id="yellowishFallColor"></span>
-<span id="brownishFallColor"></span> -->
 </body>
 </html>
