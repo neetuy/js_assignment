@@ -15,14 +15,14 @@ var curryIt = function(uncurried) {
     ));
   };
 };
-
+//function assigned to greeter variable with different parameters
 var greeter = function(greeting, separator, emphasis, name) {
   console.log(greeting + separator + name + emphasis);
 };
-
+//greetHello varable call function curryIt and invoke greeter
 var greetHello = curryIt(greeter, "Hello", ", ", ".");
 greetHello("Heidi");
-
+//greetHello varable call function curryIt and invoke greeter
 var greetGoodbye = curryIt(greeter, "Goodbye", ", ");
 greetGoodbye(".", "Joe");
 </script>

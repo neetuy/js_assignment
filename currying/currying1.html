@@ -5,6 +5,7 @@
 	<title></title>
 </head>
 <script type="text/javascript">
+//curry function 
 var curryIt = function(uncurried) {
   var parameters = Array.prototype.slice.call(arguments, 1);
   return function() {
@@ -13,16 +14,18 @@ var curryIt = function(uncurried) {
     ));
   };
 };
-
+//function assigned to employee with different parameters
 var employee = function(name, depart, address) {
+	//output
   console.log(name+ depart + address);
 };
-
-var emp = curryIt(employee," A ");
+//emp varable call function curryIt and invoke employee
+var emp_1_info = curryIt(employee," A ");
+//passing parameters
 emp(" Management "," Delhi ");
 emp(" Hr "," jaipur ");
 
-var emp_2 = curryIt(employee,"B"," HR ");
+var emp_2_info = curryIt(employee,"B"," HR ");
 emp_2(" Gurgaon ");
 // var emp_2 = curryIt(employee,"c","HR","jaipur");
 </script>
