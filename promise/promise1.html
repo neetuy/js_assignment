@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		const fulfilledThenable = {
+      then(reaction) {
+          reaction('hello');
+      }
+  };
+  const promise = Promise.resolve(fulfilledThenable);
+  console.log(promise instanceof Promise); // true
+  promise.then(x => console.log(x)); // hello
+	</script>
+</head>
+<body>
+
+</body>
+</html>
