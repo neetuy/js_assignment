@@ -17,8 +17,10 @@ var emp = [
 //reduce data 
 var sum = emp.reduce(function(prevVal, elem) 
 	{	//add all value of experience
+        //preVal denotes accumulator which hold the value of last sum value 
     return prevVal + elem.experience;
 }, 0);
+//output
 console.log(sum);
 </script>
 <body>
