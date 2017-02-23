@@ -21,13 +21,15 @@ var employee = function(name, depart, address) {
 };
 //emp varable call function curryIt and invoke employee
 var emp_1_info = curryIt(employee," A ");
-//passing parameters
+//passing parameters to employee deparment and address
 emp(" Management "," Delhi ");
-emp(" Hr "," jaipur ");
-
+//passing parameters to emp_1's deparment and address
+ emp(" Hr "," jaipur ");
+//passing parameters to emp_2's name and deparment
 var emp_2_info = curryIt(employee,"B"," HR ");
+//passing parameters to emp_2's address
 emp_2(" Gurgaon ");
-// var emp_2 = curryIt(employee,"c","HR","jaipur");
+var emp_3 = curryIt(employee,"c","HR","jaipur");
 </script>
 <body>
 </body>

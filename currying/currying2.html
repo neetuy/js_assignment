@@ -17,13 +17,16 @@ var curryIt = function(uncurried) {
 };
 //function assigned to greeter variable with different parameters
 var greeter = function(greeting, separator, emphasis, name) {
+	//output
   console.log(greeting + separator + name + emphasis);
 };
 //greetHello varable call function curryIt and invoke greeter
 var greetHello = curryIt(greeter, "Hello", ", ", ".");
+//passing parameters name
 greetHello("Heidi");
 //greetGoodbye varable call function curryIt and invoke greeter
 var greetGoodbye = curryIt(greeter, "Goodbye", ", ");
+//passing parameters to greetGoodbye separator and name
 greetGoodbye(".", "Joe");
 </script>
 <body>

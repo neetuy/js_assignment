@@ -4,15 +4,20 @@
 	<title></title>
 </head>
 <script type="text/javascript">
-//function curried
+//nameCurried return a function
 var nameCurried = function(first_name) {
+	//return function last name to function(first_name)
   return function(last_name) {
+  	//return first name and last name
     console.log(first_name + ", " +last_name );
   };
 };
 //nameCurried can be used by passing parameter several times .
+//pass parameter value :firstname 
 var fullName = nameCurried("abc");
+//pass parameter :lastname value 
 fullName("xyz"); 
+//pass both parameter
 nameCurried("lmn")("xyz");
 </script>
 <body>

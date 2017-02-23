@@ -3,15 +3,16 @@
 
 <TITLE>Fibonacci series</TITLE>
 <script>
+//function work onclick
 function faboncci()
- {
+ { //assigned value of element getting from id:num to n
   var n=Number(document.getElementById("num").value);
+  //defining variables
   var a=0,b=1,c=0,s=" ";
-//  document.write("Fibonacci Series: ")
+//while some of a,b is less or equal to n statements within loop execute
   while((a+b)<=n)
       {
          c=a+b;
-         //document.write(c+" ");
          s=s+c+ ",";
          b=a;
          a=c;

@@ -1,15 +1,20 @@
 <html>
 <head>
 <script>
+//function
 function fact(){
-
-var i, no, fact;
+//define variable
+var i, n, fact;
+//initialize value of fact variable by 1
 fact=1;
-n=Number(document.getElementById("num").value);
+//assigned value of element getting from id:num to n
+n = Number(document.getElementById("num").value);
+//loop for value i:1 upto value of i:n
 for(i=1; i<=n; i++)  
-{
+{//multiply the value of i to fact which is initialize as 1
 fact= fact*i;
 }  
+//output
 document.getElementById("fact").value= fact;
 }
 </script>

@@ -6,14 +6,18 @@
 		function numberGenerator() {
   // Local “free” variable that ends up within the closure
   var num = 1;
-  function checkNumber() { 
+  //function 
+  function checkNumber() 
+  { //give num value 
     console.log(num);
   }
   num++;
+  //return increament value of n
   return checkNumber;
 }
-
+//assingned nunmberGenerator to number
 var number = numberGenerator();
+//value of n will become 2
 number(); 
 
 </script>

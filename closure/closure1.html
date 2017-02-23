@@ -4,17 +4,21 @@
   <title>Closures</title>
   <meta charset="UTF-8" />
   <script>
-   
+   //function getHandler  
     function getHandler(i) {
+      //return function into getHandler function
   return function handler() {
+    //return alert dialog-box on pressing key
     alert("Clicked button " + i);
   };
 }
-
+//add event listner on window load
 window.addEventListener("load", function() {
+  //loop for button 
   for (var i = 1; i < 4; i++) {
+    //get value from button and asigned it to button 
     var button = document.getElementById("button" + i);
-
+    //call eventListner and getgenerator function when button pressed.
     button.addEventListener("click", getHandler(i));
   }
 });

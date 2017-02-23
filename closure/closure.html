@@ -3,16 +3,24 @@
 <head>
 	<title></title>
 	<script type="text/javascript">
+	//function makeAdder
 	function makeAdder(x) {
+		//return value to makeAdder  
   return function(y) {
+  	// value return to function 
     return x + y;
   };
 }
-
+//call makeAdder passing parameter value 5 assigned to add5
 var add5 = makeAdder(5);
+//call makeAdder passing parameter value 10 assigned to add10
 var add10 = makeAdder(10);
+//call makeAdder passing another parameter value 2 to add5
 
 console.log(add5(2));  
+//call makeAdder passing another parameter value 6 to add5
+console.log(add5(6));  
+//call makeAdder passing parameter value 2 to add10
 console.log(add10(2)); 
 	</script>
 </head>
